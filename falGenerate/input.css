@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+	font-family: "Just Another Hand", cursive;
+}
+
+main {
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.cardImg:hover {
+	cursor: pointer;
+	filter: brightness(0.55);
+}
+
+.selected {
+	filter: brightness(0.15);
+}
+
+.selected:hover {
+	filter: brightness(0.15) !important;
+}
