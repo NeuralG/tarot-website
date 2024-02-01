@@ -10,16 +10,27 @@ h1 {
 	font-family: "Just Another Hand", cursive;
 }
 
-main {
-	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+.poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+#main {
+	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+@media (width>640px) {
+	#main {
+		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	}
+}
+
+@media (width>1024px) {
+	#main {
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	}
 }
 
 .cardImg:hover {
 	cursor: pointer;
 	filter: brightness(0.55);
-}
-
-.cardText {
-	text-align: center;
-	font-weight: 700;
 }

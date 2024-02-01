@@ -2,12 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.55);
+}
+
 h1 {
 	font-family: "Just Another Hand", cursive;
 }
 
+.poppins {
+	font-family: "Poppins", sans-serif;
+}
+
 main {
-	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+}
+
+@media (width>640px) {
+	main {
+		grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+	}
+}
+
+@media (width>1024px) {
+	main {
+		grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+	}
 }
 
 .cardImg:hover {

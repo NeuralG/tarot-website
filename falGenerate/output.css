@@ -544,8 +544,22 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-5 {
@@ -554,6 +568,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -568,16 +586,26 @@ video {
   min-height: 100vh;
 }
 
-.w-\[90\%\] {
-  width: 90%;
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-96 {
   max-width: 24rem;
 }
 
-.max-w-\[1200px\] {
-  max-width: 1200px;
+.max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .flex-wrap {
@@ -590,6 +618,27 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.gap-y-1 {
+  row-gap: 0.25rem;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .bg-\[\#0f0f0f\] {
@@ -616,8 +665,17 @@ video {
   --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-5 {
   padding: 1.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-5 {
@@ -633,14 +691,27 @@ video {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
 }
 
-.text-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
@@ -648,12 +719,41 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
 h1 {
   font-family: "Just Another Hand", cursive;
 }
 
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
 main {
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+}
+
+@media (width>640px) {
+  main {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}
+
+@media (width>1024px) {
+  main {
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  }
 }
 
 .cardImg:hover {
@@ -671,4 +771,31 @@ main {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:text-\[\#2d2a2a\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(45 42 42 / var(--tw-text-opacity));
+}
+
+.hover\:brightness-75:hover {
+  --tw-brightness: brightness(.75);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 640px) {
+  .sm\:text-\[0\.85rem\] {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:gap-x-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+
+  .lg\:text-\[1rem\] {
+    font-size: 1rem;
+  }
 }

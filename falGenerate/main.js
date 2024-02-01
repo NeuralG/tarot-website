@@ -28,10 +28,10 @@ const randomizedArray = shuffle(tarotCards)
 let selectedCardsArray = []
 
 mainEl.innerHTML = randomizedArray
-	.map((card, index) => {
+	.map((card) => {
 		return `
   <div>
-    <img src="./falDictionary/tarot.jpg" id="tarot${index}" data-card='${card}' class='cardImg'></img>
+    <img src="./falDictionary/card.png" data-card='${card.name}' data-desc='${card.description}' class='cardImg'></img>
   </div>
   `
 	})
@@ -39,9 +39,14 @@ mainEl.innerHTML = randomizedArray
 
 document.addEventListener("click", (e) => {
 	if (e.target.dataset.card && selectedCardsArray.length != 3) {
-		if (!selectedCardsArray.includes(e.target.dataset.card)) {
-			selectedCardsArray.push(e.target.dataset.card)
+		if (!selectedCardsArray.includes(e.target)) {
+			selectedCardsArray.push(e.target)
 			e.target.classList.add("selected")
+		} else {
+			selectedCardsArray = selectedCardsArray.filter(
+				(card) => card != e.target
+			)
+			e.target.classList.remove("selected")
 		}
 	}
 	if (selectedCardsArray.length === 3) {
@@ -49,8 +54,10 @@ document.addEventListener("click", (e) => {
 			.map((card, index) => {
 				return `
                 <div class="${index !== 2 && "mb-5"}">
-                    <p class="text-2xl">${card}</p>
-                    <p>Her bir kartın açıklaması buraya gelecek</p>
+                    <p class="text-center text-2xl font-bold">${
+						card.dataset.card
+					}</p>
+                    <p class="text-center">${card.dataset.desc}</p>
                 </div>
             `
 			})

@@ -4,30 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Aslı Tarot</title>
+
 		<link rel="stylesheet" href="./falDictionary/output.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Poppins&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 
 	<body class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500">
-		<dialog class="bg-white max-w-96 p-5"></dialog>
+		<dialog class="max-w-96 bg-white p-5"></dialog>
 
-		<header class="bg-[#0f0f0f] text-white">
-			<h1 class="text-center text-7xl p-5">ASLI TAROT</h1>
-			<nav class="flex-wrap flex text-2xl justify-evenly text-green-400 pb-5">
-				<a href="" class="hover:cursor-pointer">Fal Sözlüğü</a>
-				<a href="./fal.html" class="hover:cursor-pointer">Fal Bak</a>
+		<header class="select-none bg-[#0f0f0f] text-white">
+			<h1 class="select-none p-5 text-center text-7xl">ASLI TAROT</h1>
+			<nav class="poppins flex flex-wrap justify-evenly pb-5 text-2xl">
+				<a
+					href=""
+					class="text-yellow-300 hover:cursor-pointer hover:brightness-75"
+					>Fal Sözlüğü</a
+				>
+				<a
+					href="./fal.html"
+					class="hover:cursor-pointer hover:brightness-75"
+					>Fal Bak</a
+				>
 			</nav>
 		</header>
+		<input
+			placeholder="Kartın ismini giriniz..."
+			id="search"
+			spellcheck="false"
+			class="mx-auto my-5 block w-[200px] rounded-xl py-5 text-center text-xl"
+		/>
 		<main
 			id="main"
-			class="mt-8 m-auto gap-2 grid max-w-[1200px] w-[90%]"
+			class="m-auto mt-8 grid w-full max-w-[1280px] select-none gap-x-3 gap-y-1 text-wrap p-2 lg:gap-x-2"
 		></main>
 	</body>
-	<script type="module" src="falDictionary/main.js"></script>
+	<script type="module" defer src="falDictionary/main.js"></script>
 </html>
