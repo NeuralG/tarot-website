@@ -355,7 +355,7 @@ export const tarotCards = [
 	{
 		name: "Tılsım Yedilisi",
 		description: "Refah, bolluk, içsel zenginlik",
-		src: "https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg",
+		src: "https://tarotvizyon.com/uploads/tarot_cards/tilsim-yedilisi-karti.webp",
 	},
 	{
 		name: "Tılsım Sekizlisi",
