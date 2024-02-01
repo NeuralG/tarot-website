@@ -15,7 +15,7 @@ function render(arr = tarotCards) {
 				return `
 <div class="grid">
 	<img src="${card.src}" data-card='${card.name}' data-desc='${card.description}' class='cardImg'></img>
-	<p class="justify-self-center text-center text-[0.7rem] font-bold hover:cursor-pointer hover:text-[#2d2a2a] sm:text-[0.85rem] lg:text-[1rem]">${card.name}</p>
+	<p class="justify-self-center overflow-hidden text-center text-[0.7rem] font-bold hover:cursor-pointer hover:text-[#2d2a2a] sm:text-[0.85rem] lg:text-[1rem]">${card.name}</p>
 </div>
 `
 			})
